@@ -18,7 +18,7 @@ module.exports = (robot) ->
     json.filter (card) ->
       card.name.toLowerCase() is name.toLowerCase()
 
-  robot.response /hs (more )*(.+)/, (msg) ->
+  robot.respond /hs (more )*(.+)/, (msg) ->
     more = msg.match[1]
     name = msg.match[2]
     additional = more != undefined
